@@ -17,6 +17,9 @@ public abstract class Contract
         this.vehicleSold = vehicleSold;
     }
 
+    protected Contract() {
+    }
+
     // Getters
     public String getDate() { return date; }
     public String getName() { return name;}

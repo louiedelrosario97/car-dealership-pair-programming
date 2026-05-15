@@ -5,7 +5,10 @@ import com.pluralsight.models.Vehicle;
 
 import java.io.*;
 import java.util.ArrayList;
-
+// DealershipFileManager will be responsible for reading the dealership file. It will
+//parse the data, and create a Dealership object, and create each Vehicle to be
+//added to the Dealership's inventory. It will also be responsible for saving the
+//dealership and it's vehicles in the file in the same pipe-delimited format
 public class DealershipFileManager
 {
     public static Dealership loadDealership() throws IOException
@@ -99,12 +102,10 @@ public class DealershipFileManager
                         vehicle.getPrice()
                 );
             }
-
         }
         catch(IOException e)
         {
             //swallow
         }
-
     }
 }

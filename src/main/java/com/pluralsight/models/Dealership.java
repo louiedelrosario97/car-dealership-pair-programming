@@ -40,7 +40,7 @@ public class Dealership
     {
         return inventory.stream()
                 .filter(v -> v.getPrice() >= min && v.getPrice() <= max)
-                .collect(Collectors.toCollection(ArrayList::new));
+                .collect(Collectors.toCollection(ArrayList::new)); // Short way (method reference)
     }
 
     public ArrayList<Vehicle> getVehiclesByMakeModel(String make, String model)
@@ -101,7 +101,7 @@ public class Dealership
     public void removeVehicle(Vehicle vehicle)
     {
         inventory = inventory.stream()
-                .filter(v -> v.getVin() != vehicle.getVin())
+                .filter(v -> v.getVin() != vehicle.getVin()) // Stream collects all vehicles in the list except for the vin that is inputted by the user.
                 .collect(Collectors.toCollection(ArrayList::new));
 
         saveDealership();

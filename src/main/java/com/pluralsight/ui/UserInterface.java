@@ -26,6 +26,7 @@ public class UserInterface
         System.out.println("5. Search by Mileage");
         System.out.println("6. Search by Vehicle Types");
         System.out.println(ColorCodes.RED + "7. Add a vehicle" + ColorCodes.RESET);
+        System.out.println("8. Sell/Lease A Vehicle"); // collect sales info, add vehicle info to the contract, ask if it's a sale or lease (can't be over 3 years old), calculate pricing
         System.out.println("0. Exit");
 
         System.out.println();
